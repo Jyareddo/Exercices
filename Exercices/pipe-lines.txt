@@ -1,4 +1,4 @@
-Commandes ici :
+Exercice a :
 
 cd /home/paul/PPE1-2627/exercice1/ann/ (on va vers le dossier qui nous interesse)
 ls 2016*.ann | wc -l (on peut compter le nombre de fichiers)
@@ -8,9 +8,13 @@ cd ../2017/ (on va aller chercher 2017 pour faire la meme chose)
 cd ../2018/
 cat *.ann | wc -l
 
-Exercice b:
+Exercice b :
 cat *.ann| grep Dublin | wc > locations.txt -l
 cat *.ann | grep France | wc > locations.txt -l
 
-Ex 2
+Ex 2a :
 grep Location 2016*.ann | cut -f 3 | sort | uniq -c | sort -n -r | head -n 15 > classement_2016.txt
+
+Ex 2b :
+ls 201?_12*.ann (Mois de décembre, tous les fichiers)
+grep Location 201?_12*.ann | cut -f 3 | sort | uniq -c | sort -n -r | head -n 15 > classement_decembre.txt
