@@ -1,0 +1,16 @@
+Commandes ici :
+
+cd /home/paul/PPE1-2627/exercice1/ann/ (on va vers le dossier qui nous interesse)
+ls 2016*.ann | wc -l (on peut compter le nombre de fichiers)
+cat 2016_01_01-001.ann | wc -l (compte le nbre de lignes pour un fichier donné)
+cat 2016*.ann | wc -l (même chose avec tous les fichiers de 2016)
+cd ../2017/ (on va aller chercher 2017 pour faire la meme chose)
+cd ../2018/
+cat *.ann | wc -l
+
+Exercice b:
+cat *.ann| grep Dublin | wc > locations.txt -l
+cat *.ann | grep France | wc > locations.txt -l
+
+Ex 2
+grep Location 2016*.ann | cut -f 3 | sort | uniq -c | sort -n -r | head -n 15 > classement_2016.txt
